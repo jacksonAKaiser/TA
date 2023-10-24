@@ -20,7 +20,9 @@
 public class Environment {
 
 	// Array of variable name(s)
-	private String[] map = { "x" };
+	//private String[] map = { "x" };
+	//Change to <String, Double> after changing all other file inputs to double(ALL FILES)
+	private HashMap<String, Integer> HashMap;
 
 	/**
 	 * Adds or updates a variable in the environment.
@@ -30,6 +32,9 @@ public class Environment {
 	 * @return The provided value.
 	 */
 	public int put(String var, int val) {
+
+		HashMap.put(var,val);
+
 		return val;
 	}
 
@@ -42,7 +47,7 @@ public class Environment {
 	 * @throws EvalException If the variable is not found in the environment.
 	 */
 	public int get(int pos, String var) throws EvalException {
-		return 0;
+		return HashMap.get(var);
 	}
 
 	/**
@@ -53,7 +58,7 @@ public class Environment {
 	public String toC() {
 		String s = "";
 		String sep = " ";
-		for (String v : map) {
+		for (String v : HashMap.keySet()) {
 			s += sep + v;
 			sep = ",";
 		}
