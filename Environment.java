@@ -22,7 +22,7 @@ public class Environment {
 	// Array of variable name(s)
 	//private String[] map = { "x" };
 	//Change to <String, Double> after changing all other file inputs to double(ALL FILES)
-	private HashMap<String, Integer> HashMap;
+	private HashMap<String, Double> HashMap;
 
 	/**
 	 * Adds or updates a variable in the environment.
