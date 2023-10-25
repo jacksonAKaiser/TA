@@ -19,6 +19,7 @@ public class Scanner {
 	private Set<String> legits=new HashSet<String>();
 	private Set<String> keywords=new HashSet<String>();
 	private Set<String> operators=new HashSet<String>();
+	private Set<String> comments=new HashSet<String>();
 
 	// initializers for previous sets
 
@@ -91,6 +92,10 @@ public class Scanner {
 	}
 
 	private void initKeywords(Set<String> s) {
+	}
+
+	private void initComments(Set<String> s) {
+		s.add("#");
 	}
 
 	// constructor:
@@ -204,7 +209,12 @@ public class Scanner {
 			return false;
 		}
 		String c=program.charAt(pos)+"";
-		if (digits.contains(c))
+		if (comments.contains(c)) {
+			pos++;
+			past('#');
+			return next();
+		}
+		else if (digits.contains(c))
 			nextNumber();
 		else if (letters.contains(c))
 			nextKwId();

@@ -22,7 +22,7 @@ public class Main {
 		/* Iterate through the command-line arguments containing the input code. */
 		for (String prog: args)
 			try {
-
+				System.out.println("\n" + prog);
 				/* Parse the input code into a syntax tree. */
 				Node node=parser.parse(prog);
 

@@ -13,7 +13,10 @@
 //   http://www.javatpoint.com/java-map
 // and elsewhere.
 
-/* 
+import java.util.HashMap;
+import java.util.Map;
+
+/*
  * The 'Environment' class represents a simple environment for variable mapping
  * and C code generation.
  */
@@ -22,7 +25,7 @@ public class Environment {
 	// Array of variable name(s)
 	//private String[] map = { "x" };
 	//Change to <String, Double> after changing all other file inputs to double(ALL FILES)
-	private HashMap<String, Integer> HashMap;
+	private Map<String, Integer> HashMap = new HashMap<String, Integer>();
 
 	/**
 	 * Adds or updates a variable in the environment.
