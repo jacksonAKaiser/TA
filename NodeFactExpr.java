@@ -22,7 +22,7 @@ public class NodeFactExpr extends NodeFact {
 	 * @return The result of the enclosed expression evaluation.
 	 * @throws EvalException If an evaluation error occurs.
 	 */
-	public int eval(Environment env) throws EvalException {
+	public double eval(Environment env) throws EvalException {
 		return expr.eval(env);
 	}
 

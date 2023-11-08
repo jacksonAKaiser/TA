@@ -24,7 +24,7 @@ public class NodeAddop extends Node {
 	 * @return The result of the addition or subtraction operation.
 	 * @throws EvalException If the operator is not valid.
 	 */
-	public int op(int o1, int o2) throws EvalException {
+	public double op(double o1, double o2) throws EvalException {
 		if (addop.equals("+"))
 			return o1+o2;
 		if (addop.equals("-"))

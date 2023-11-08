@@ -25,7 +25,7 @@ public class Environment {
 	// Array of variable name(s)
 	//private String[] map = { "x" };
 	//Change to <String, Double> after changing all other file inputs to double(ALL FILES)
-	private Map<String, Integer> HashMap = new HashMap<String, Integer>();
+	private Map<String, Double> HashMap = new HashMap<String, Double>();
 
 	/**
 	 * Adds or updates a variable in the environment.
@@ -34,7 +34,7 @@ public class Environment {
 	 * @param val The value to associate with the variable.
 	 * @return The provided value.
 	 */
-	public int put(String var, int val) {
+	public double put(String var, double val) {
 
 		HashMap.put(var,val);
 
@@ -49,7 +49,7 @@ public class Environment {
 	 * @return The value associated with the variable.
 	 * @throws EvalException If the variable is not found in the environment.
 	 */
-	public int get(int pos, String var) throws EvalException {
+	public double get(int pos, String var) throws EvalException {
 		return HashMap.get(var);
 	}
 

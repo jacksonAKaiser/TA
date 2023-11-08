@@ -24,7 +24,7 @@ public class NodeAssn extends Node {
 	 * @return The result of the assignment (the assigned value).
 	 * @throws EvalExceptoin If an evaluation error occurs.
 	 */
-	public int eval(Environment env) throws EvalException {
+	public double eval(Environment env) throws EvalException {
 		// Update the environment by putting the value of the expression into the variable.
 		return env.put(id, new NodeWr(expr).eval(env));
 	}

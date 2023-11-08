@@ -41,7 +41,7 @@ public class NodeExpr extends Node {
 	 * @return The result of the expression evaluation.
 	 * @throws EvalException If an evaluation error occurs.
 	 */
-	public int eval(Environment env) throws EvalException {
+	public double eval(Environment env) throws EvalException {
 		return expr==null
 			? term.eval(env)
 			: addop.op(expr.eval(env),term.eval(env));

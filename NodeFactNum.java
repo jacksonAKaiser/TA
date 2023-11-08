@@ -21,7 +21,7 @@ public class NodeFactNum extends NodeFact {
 	 * @return The integer value of the numeric constant.
 	 * @throws EvalExceptoin This exception is not thrown for constant evaluation.
 	 */
-	public int eval(Environment env) throws EvalException {
+	public double eval(Environment env) throws EvalException {
 		return Integer.parseInt(num);
 	}
 

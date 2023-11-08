@@ -21,8 +21,8 @@ public class NodeWr extends Node {
 	 * @return The result of the evaluated expression.
 	 * @throws EvalException If an evaluation error occurs.
 	 */
-	public int eval(Environment env) throws EvalException {
-		int d=expr.eval(env);
+	public double eval(Environment env) throws EvalException {
+		double d=expr.eval(env);
 		int i=(int) d;
 		if (i==d)
 			System.out.println(i);

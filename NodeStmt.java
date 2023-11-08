@@ -21,7 +21,7 @@ public class NodeStmt extends Node {
 	 * @return		The result of the assignment node's evaluation.
 	 * @throws EvalException If an evaluation error occurs during the assignment
 	 */
-	public int eval(Environment env) throws EvalException {
+	public double eval(Environment env) throws EvalException {
 		return assn.eval(env);
 	}
 

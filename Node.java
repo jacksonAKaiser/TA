@@ -17,7 +17,7 @@ public abstract class Node {
 	 * @return The result of the evaluation.
 	 * @throws EvalException Tif the node cannot be evaluated.
 	 */
-	public int eval(Environment env) throws EvalException {
+	public double eval(Environment env) throws EvalException {
 		throw new EvalException(pos,"cannot eval() node!");
 	}
 
